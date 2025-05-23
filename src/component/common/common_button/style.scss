@@ -1,0 +1,45 @@
+.common-button {
+    padding: 5px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    font-family: "Space Grotesk", sans-serif;
+    transition: all 0.3s ease-in-out;
+    color: #FFFFFF;
+    border-color: #00B3B5;
+    background-color: #00B3B5;
+    margin-top: 1px;
+
+    &.btn-info {
+        padding: '5px 10px 5px 10px';
+
+        &.claim:hover {
+            background: #00B3B5 !important; // Change on hover
+        }
+
+        &.make-public:hover {
+            background: #F29339 !important; // Change on hover
+        }
+    }
+
+
+    &:hover {
+        opacity: 0.9;
+        color: #fff;
+        background-color: rgba(0, 179, 181, 0.5);
+        border-color: #00B3B5;
+    }
+
+    &:active {
+        opacity: 0.9;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+}

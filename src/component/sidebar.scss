@@ -1,0 +1,224 @@
+@import "../Assets/var.scss";
+
+.sidebar {
+    width: $sidebar-width;
+    background-color: darken($primary-color, 5%);
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+
+    &.active {
+        transition: transform 0.8s ease-out, opacity 0.6s ease-in;
+    }
+
+    .toggle-switch {
+        border: 1px solid #f9861e;
+        border-radius: 8px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .switch-btn {
+            padding: 4px;
+
+            .custom-toggle {
+                height: 46px;
+            }
+
+            .custom-toggle.active {
+                background: #f9861e !important;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    .logo {
+        padding: 20px 25px;
+        border-bottom: 1px solid #ffffff1a;
+        text-align: left;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .sidebar_content {
+        padding: 0px 25px;
+    }
+
+    .menu {
+        flex-grow: 1;
+        overflow-y: auto;
+        max-height: calc(100vh - 180px);
+        animation: fadeInUp 1s ease-in-out;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        &:hover::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .list-group {
+            background: transparent;
+            margin-top: 10px;
+
+            .list-group-item {
+                background: transparent;
+                border: none;
+                border-radius: 6px !important;
+                margin-bottom: 10px;
+                transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+                opacity: 0;
+
+                &:nth-child(odd) {
+                    animation: fadeInUp 0.8s ease-in-out forwards;
+                }
+
+                &:nth-child(even) {
+                    animation: fadeInUp 1s ease-in-out forwards;
+                }
+
+                                a {
+                                    color: #ffffff;
+                                    font-family: $font-primary;
+                                    padding: 13px 14px;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    transition: color 0.3s ease-in-out;
+                                    position: relative;
+                                    text-decoration: none;
+                                    display: flex;
+                                    align-items: center;
+                
+                                    &.active {
+                                        font-weight: 600;
+                                        position: relative;
+                
+                                        &::after {
+                                        content: "0";
+                                            width: 8px;
+                                            height: 8px;
+                                            background: #cfffb8;
+                                            box-shadow: 0px 0px 2px 1px #50f800;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            right: 16px;
+                                            top: 21px;
+                                            font-size: 0px;
+                                        }
+                                    }
+                                }
+                img {
+                    margin-right: 10px;
+                }
+                &:hover {
+                    background: #282a33;
+                    transform: scale(1.05);
+                }
+                &.active {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+
+    .logout-button {
+        margin-top: auto;
+        text-align: center;
+        padding-bottom: 15px;
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 20px;
+            gap: 10px;
+            border: 1px solid #e63e32;
+            border-radius: 8px;
+            background: transparent;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: $font-primary;
+            transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #e63e32;
+            transform: scale(1.05);
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 991px) {
+    .sidebar-toggle-btn {
+            background: no-repeat;
+            border: none;
+            color: #fff;
+        }
+    .sidebar{
+        display: none;
+    }
+        .sidebar.active{
+            display: inherit;
+            position: absolute;
+                z-index: 1;
+
+                .close-sidebar{
+                position: absolute;
+                    right: 15px;
+                    top: 16px;
+                    font-size: 23px;
+                    padding: 0;
+                    background: no-repeat;
+                    border: none;
+                    color: #fff;
+                }
+            }
+        
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+   
+
+    
+   
+}
+
+// Keyframe Animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

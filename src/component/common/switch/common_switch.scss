@@ -1,0 +1,23 @@
+
+.switch-btn {
+    overflow: hidden;
+
+    .custom-toggle {
+        background-color: transparent !important;
+        color: #bbb;
+        border: none;
+        padding: 8px 16px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        &.active {
+            background-color: #f9861e ;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+}

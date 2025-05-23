@@ -1,0 +1,76 @@
+/* Define Global Scrollbar Variables */
+:root {
+    --scrollbar-width: 8px;
+    --scrollbar-height: 8px;
+    --scrollbar-bg: #282A33;
+    --scrollbar-thumb: #00B3B5;
+    /* Solid color for Chrome compatibility */
+    --scrollbar-thumb-hover: #008C8E;
+    --table-scrollbar-thumb: #F29339;
+    --modal-scrollbar-thumb: #B03A2E;
+}
+
+/* Firefox Custom Scrollbar */
+* {
+    scrollbar-width: auto !important;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+  }
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-height);
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Scrollbar Handle (Chrome & Firefox) */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    /* Solid color */
+    border-radius: 15px;
+    border: 1px solid var(--scrollbar-bg);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Table-Specific Scrollbar */
+.table-container {
+    /* Adjust based on your table */
+    overflow: auto;
+}
+
+.table-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: var(--table-scrollbar-thumb);
+}
+
+/* Modal-Specific Scrollbar */
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--modal-scrollbar-thumb);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling for Scroll Behavior */
+body {
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}

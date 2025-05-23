@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #292929;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.3s, background-color 0.3s;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+
+}
+
+.navbar-nav{
+    font-size: 17px;
+    a{
+        font-weight: 600;
+    }
+    button{
+        border: 1px solid #292929;
+        color: #292929;
+    }
+}
+
+
+.client {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+
+    img {
+            width: 150px;
+            height: 100px;
+        }
+
+   
+}
+
+.banner-sec-01 {
+    padding: 70px 100px;
+    h1 {
+            font-size: 4.5rem;
+            text-shadow: 0.04em 0.04rem 0 #81b5ab;
+            color: #1984b9;
+        }
+}
+
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.heading2{
+    display: flex;
+}
+
+.section {
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.list {
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    position: relative;
+    padding: 0.2rem;
+}
+
+.item {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    inset: 0%;
+    box-shadow: rgb(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+}
+
+.item_number {
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+}
+
+.item_content {
+    background-color: #b0e5ff;
+    color: #292929;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+    display: flex;
+    position: relative;
+    width: 50%;
+}
+
+.item_media {
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+}
+
+.padding-global {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.padding-vertical {
+    padding: 2rem;
+}
+.img-section img, .banner-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.logo {
+    font-family: 'Boldonse', sans-serif;
+    text-shadow: 0.04em 0.04rem 0 #81b5ab;
+}
+@media (max-width: 575.98px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item_content,
+    .item_media {
+        height: 50vh;
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .item_number {
+        font-size: .5rem;
+        top: 1.5rem;
+    }
+}

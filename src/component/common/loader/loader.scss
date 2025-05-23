@@ -1,0 +1,47 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background: #f9861e;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 15px rgba(249, 134, 30, 0.6);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.loading-text {
+    color: #f9861e;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+}

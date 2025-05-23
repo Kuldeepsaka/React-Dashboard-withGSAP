@@ -1,0 +1,55 @@
+// Header.scss
+@import "../Assets/var.scss";
+.dashboard-header {
+    background-color: #191C26;
+    color: white;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-family:$font-primary;
+
+    .left-section {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            color: #00B3B5;
+            font-size: 1.5rem; // 24px
+            font-weight: bold;
+            margin: 0;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+.wallet-button{
+    padding: 10px 20px;
+}
+        .theme-toggle {
+            font-size: 1.5rem;
+            color: #F9861E;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: #ffbb33;
+            }
+        }
+
+        .user-icon {
+            font-size: 1.8rem;
+            color: lightgrey;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
